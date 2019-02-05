@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Main here.
  *
@@ -7,8 +7,35 @@
  */
 public class Main
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    public static void main(String[] args)
+    {// instance variables - replace the example below with your own
+    //int number;
+    Random random=new Random();
+    Scanner sc=new Scanner(System.in);
+    int number=random.nextInt(100);
+    int guess=-1;
+    int count=0;
+    
+    while(guess!=number)
+    {
+        System.out.println("Enter your guess:");
+        guess=sc.nextInt();
+        count=count+1;
+        if(guess<number)
+        {
+            System.out.println("Too small number");
+        }
+        else if(guess>number)
+        {
+            System.out.println("Too large number");
+        }
+        else
+        {
+    
+    System.out.println("Correct number!! and number of guesses:"+ count);
+}
+}
+}
 
     /**
      * Constructor for objects of class Main
@@ -16,7 +43,7 @@ public class Main
     public Main()
     {
         // initialise instance variables
-        x = 0;
+        //int x = 0;
     }
 
     /**
@@ -28,6 +55,6 @@ public class Main
     public int sampleMethod(int y)
     {
         // put your code here
-        return x + y;
+        return 0;
     }
 }
